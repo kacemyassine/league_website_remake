@@ -20,13 +20,9 @@ export interface LeagueData {
 export function useGitHubData() {
   const fetchData = useCallback(async (): Promise<LeagueData | null> => {
     try {
-      // Add cache busting to always get fresh data
       const response = await fetch(`${GITHUB_CONFIG.rawUrl}?t=${Date.now()}`);
-      if (!response.ok) {
-        throw new Error('Failed to fetch data from GitHub');
-      }
-      const data = await response.json();
-      return data;
+      if (!response.ok) throw new Error('Failed to fetch data from GitHub');
+      return await response.json();
     } catch (error) {
       console.error('Error fetching GitHub data:', error);
       toast.error('Failed to fetch league data');
@@ -44,6 +40,9 @@ export function useGitHubData() {
           path: GITHUB_CONFIG.path,
           branch: GITHUB_CONFIG.branch,
         },
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
+        },
       });
 
       if (error) {
@@ -51,7 +50,6 @@ export function useGitHubData() {
         toast.error('Failed to update data on GitHub');
         return false;
       }
-
       if (result?.error) {
         console.error('GitHub API error:', result.error);
         toast.error(result.error);
