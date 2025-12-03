@@ -1,4 +1,5 @@
 import { useLeagueStore } from '@/store/leagueStore';
+import { useAdmin } from '@/contexts/AdminContext';
 import { User, Trash2, Edit2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -9,6 +10,7 @@ interface TopScorersProps {
 
 export function TopScorers({ onEditPlayer }: TopScorersProps) {
   const { players = [], teams = [], deletePlayer } = useLeagueStore();
+  const { isAdmin } = useAdmin();
 
   const sortedPlayers = [...players].sort((a, b) => (b.goals || 0) - (a.goals || 0));
 
@@ -68,14 +70,16 @@ export function TopScorers({ onEditPlayer }: TopScorersProps) {
                   <p className="text-xs text-muted-foreground">goals</p>
                 </div>
 
-                <div className="flex gap-1">
-                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary" onClick={() => onEditPlayer(player.id)}>
-                    <Edit2 className="w-4 h-4" />
-                  </Button>
-                  <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => deletePlayer(player.id)}>
-                    <Trash2 className="w-4 h-4" />
-                  </Button>
-                </div>
+                {isAdmin && (
+                  <div className="flex gap-1">
+                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary" onClick={() => onEditPlayer(player.id)}>
+                      <Edit2 className="w-4 h-4" />
+                    </Button>
+                    <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-destructive" onClick={() => deletePlayer(player.id)}>
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
+                  </div>
+                )}
               </div>
             );
           })}

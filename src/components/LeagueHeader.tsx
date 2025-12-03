@@ -15,14 +15,14 @@ export function LeagueHeader() {
       <div className="bubble w-5 h-5 top-16 right-[25%]" style={{ animationDelay: '0.5s' }} />
 
       <div className="relative z-10 animate-fade-in">
-        <div className="flex items-center justify-center gap-4 mb-4">
-          <Trophy className="w-10 h-10 text-gold drop-shadow-lg" />
-          <h1 className="text-4xl md:text-6xl font-display font-bold tracking-wider text-gradient-gold">
+        <div className="flex items-center justify-center gap-2 sm:gap-4 mb-4 px-2">
+          <Trophy className="w-6 h-6 sm:w-10 sm:h-10 text-gold drop-shadow-lg shrink-0" />
+          <h1 className="text-2xl sm:text-4xl md:text-6xl font-display font-bold tracking-wider text-gradient-gold text-center">
             ATLANTIS LEAGUE V2
           </h1>
-          <Trophy className="w-10 h-10 text-gold drop-shadow-lg" />
+          <Trophy className="w-6 h-6 sm:w-10 sm:h-10 text-gold drop-shadow-lg shrink-0" />
         </div>
-        <p className="text-lg text-muted-foreground font-body tracking-wide">
+        <p className="text-sm sm:text-lg text-muted-foreground font-body tracking-wide text-center px-2">
           50 Matches • 2 Teams • 1 Champion
         </p>
         <div className="mt-6 flex justify-center gap-12">

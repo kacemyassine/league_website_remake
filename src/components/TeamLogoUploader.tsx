@@ -1,11 +1,13 @@
 import { useRef } from 'react';
 import { useLeagueStore } from '@/store/leagueStore';
+import { useAdmin } from '@/contexts/AdminContext';
 import { Shield, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 export function TeamLogoUploader() {
   const { teams, updateTeamLogo } = useLeagueStore();
+  const { isAdmin } = useAdmin();
   const fileInputRefs = useRef<{ [key: string]: HTMLInputElement | null }>({});
 
   const handleLogoUpload = (teamId: string, file: File) => {
@@ -27,10 +29,11 @@ export function TeamLogoUploader() {
           <div key={team.id} className="text-center">
             <div
               className={cn(
-                'w-24 h-24 mx-auto rounded-xl overflow-hidden border-2 bg-muted/30 flex items-center justify-center cursor-pointer hover:border-primary transition-colors',
-                team.id === 'team1' ? 'border-primary/50' : 'border-secondary/50'
+                'w-24 h-24 mx-auto rounded-xl overflow-hidden border-2 bg-muted/30 flex items-center justify-center transition-colors',
+                team.id === 'team1' ? 'border-primary/50' : 'border-secondary/50',
+                isAdmin && 'cursor-pointer hover:border-primary'
               )}
-              onClick={() => fileInputRefs.current[team.id]?.click()}
+              onClick={() => isAdmin && fileInputRefs.current[team.id]?.click()}
             >
               {team.logo ? (
                 <img
@@ -48,25 +51,29 @@ export function TeamLogoUploader() {
             )}>
               {team.name}
             </p>
-            <input
-              type="file"
-              accept="image/*"
-              ref={(el) => (fileInputRefs.current[team.id] = el)}
-              className="hidden"
-              onChange={(e) => {
-                const file = e.target.files?.[0];
-                if (file) handleLogoUpload(team.id, file);
-              }}
-            />
-            <Button
-              variant="ghost"
-              size="sm"
-              className="mt-2 text-xs gap-1"
-              onClick={() => fileInputRefs.current[team.id]?.click()}
-            >
-              <Upload className="w-3 h-3" />
-              Upload Logo
-            </Button>
+            {isAdmin && (
+              <>
+                <input
+                  type="file"
+                  accept="image/*"
+                  ref={(el) => (fileInputRefs.current[team.id] = el)}
+                  className="hidden"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file) handleLogoUpload(team.id, file);
+                  }}
+                />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="mt-2 text-xs gap-1"
+                  onClick={() => fileInputRefs.current[team.id]?.click()}
+                >
+                  <Upload className="w-3 h-3" />
+                  Upload Logo
+                </Button>
+              </>
+            )}
           </div>
         ))}
       </div>

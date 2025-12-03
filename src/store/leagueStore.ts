@@ -43,6 +43,9 @@ interface LeagueState {
   matches: Match[];
   selectedHomeTeam: Team | null;
   selectedAwayTeam: Team | null;
+  setTeams: (teams: Team[]) => void;
+  setPlayers: (players: Player[]) => void;
+  setMatches: (matches: Match[]) => void;
   setSelectedHomeTeam: (team: Team | null) => void;
   setSelectedAwayTeam: (team: Team | null) => void;
   addMatch: (homeGoals: number, awayGoals: number, scorers?: { playerId: string; goals: number }[]) => void;
@@ -87,6 +90,9 @@ export const useLeagueStore = create<LeagueState>((set, get) => ({
   selectedHomeTeam: null,
   selectedAwayTeam: null,
 
+  setTeams: (teams) => set({ teams }),
+  setPlayers: (players) => set({ players }),
+  setMatches: (matches) => set({ matches }),
   setSelectedHomeTeam: (team) => set({ selectedHomeTeam: team }),
   setSelectedAwayTeam: (team) => set({ selectedAwayTeam: team }),
 
