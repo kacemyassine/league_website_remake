@@ -93,7 +93,7 @@
     },
     {
       "id": "player-10",
-      "name": "Kylian Mbappé",
+      "name": "Kylian Mbappï¿½",
       "teamId": "team1",
       "goals": 3,
       "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
@@ -177,7 +177,7 @@
     },
     {
       "id": "player-22",
-      "name": "Emiliano Martínez",
+      "name": "Emiliano Martï¿½nez",
       "teamId": "team1",
       "goals": 0,
       "image": "/images/GOAL - Blank WEB - Facebook (87).png.webp"
@@ -275,7 +275,7 @@
     },
     {
       "id": "player-36",
-      "name": "Rúben Neves",
+      "name": "Rï¿½ben Neves",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/7715.png"
@@ -289,7 +289,7 @@
     },
     {
       "id": "player-38",
-      "name": "Martin Ødegaard",
+      "name": "Martin ï¿½degaard",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/404206_martin_odegaard_20250928235350.png"
@@ -310,7 +310,7 @@
     },
     {
       "id": "player-41",
-      "name": "Kylian Mbappé",
+      "name": "Kylian Mbappï¿½",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
@@ -324,7 +324,7 @@
     },
     {
       "id": "player-43",
-      "name": "Lautaro Martínez",
+      "name": "Lautaro Martï¿½nez",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/82491.png"
