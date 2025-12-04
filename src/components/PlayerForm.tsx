@@ -22,16 +22,17 @@ interface PlayerFormProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   editingPlayerId: string | null;
+  onSave?: (updatedData: any) => void;
 }
 
-export function PlayerForm({ open, onOpenChange, editingPlayerId }: PlayerFormProps) {
+export function PlayerForm({ open, onOpenChange, editingPlayerId, onSave }: PlayerFormProps) {
   const { players, teams, addPlayer, editPlayer } = useLeagueStore();
   const [name, setName] = useState('');
   const [teamId, setTeamId] = useState<string>(teams?.[0]?.id || 'team1');
   const [image, setImage] = useState<string | null>(null);
   const [goals, setGoals] = useState(0);
 
-  const editingPlayer = editingPlayerId ? players?.find((p) => p.id === editingPlayerId) : null;
+  const editingPlayer = editingPlayerId ? players?.find((p: any) => p.id === editingPlayerId) : null;
 
   useEffect(() => {
     if (editingPlayer) {
@@ -59,10 +60,18 @@ export function PlayerForm({ open, onOpenChange, editingPlayerId }: PlayerFormPr
     e.preventDefault();
     if (!name.trim()) return;
 
-    if (editingPlayerId && editingPlayer) {
-      editPlayer(editingPlayerId, { name, teamId, image, goals });
-    } else {
-      addPlayer({ name, teamId, image, goals });
+    const resultState = editingPlayerId && editingPlayer
+      ? editPlayer(editingPlayerId, { name, teamId, image, goals })
+      : addPlayer({ name, teamId, image, goals });
+
+    const fullState = resultState ?? {
+      players: useLeagueStore.getState().players,
+      teams: useLeagueStore.getState().teams,
+      matches: useLeagueStore.getState().matches,
+    };
+
+    if (typeof onSave === 'function') {
+      onSave(fullState);
     }
 
     onOpenChange(false);
@@ -70,14 +79,14 @@ export function PlayerForm({ open, onOpenChange, editingPlayerId }: PlayerFormPr
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-card border-border max-w-md">
+      <DialogContent className="bg-card border-border max-w-md mx-4">
         <DialogHeader>
           <DialogTitle>{editingPlayerId ? 'Edit Player' : 'Add New Player'}</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6 pt-4">
           <div className="flex flex-col items-center gap-4">
-            <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-border bg-muted group">
+            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-border bg-muted group">
               {image ? (
                 <>
                   <img src={image} alt="Player" className="w-full h-full object-cover" />
@@ -91,7 +100,7 @@ export function PlayerForm({ open, onOpenChange, editingPlayerId }: PlayerFormPr
                 </>
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
-                  <User className="w-10 h-10 text-muted-foreground" />
+                  <User className="w-8 h-8 md:w-10 md:h-10 text-muted-foreground" />
                 </div>
               )}
             </div>
@@ -111,7 +120,7 @@ export function PlayerForm({ open, onOpenChange, editingPlayerId }: PlayerFormPr
             <Select value={teamId} onValueChange={setTeamId}>
               <SelectTrigger className="bg-input border-border"><SelectValue /></SelectTrigger>
               <SelectContent className="bg-popover border-border">
-                {teams?.map((team) => <SelectItem key={team.id} value={team.id}>{team.name}</SelectItem>)}
+                {teams?.map((team: any) => <SelectItem key={team.id} value={team.id}>{team.name}</SelectItem>)}
               </SelectContent>
             </Select>
           </div>
