@@ -28,52 +28,328 @@
     }
   ],
   "players": [
-    {"id":"player-1","name":"Peter Schmeichel","teamId":"team1","goals":0,"image":"/images/peter-schmeichel-danish-footballer-in-national-team-for-european-championship-WPA7TP.jpg"},
-    {"id":"player-2","name":"Alessandro Costacurta","teamId":"team1","goals":0,"image":"/images/6650df3c18b530eb0a869213b4f3b8fb.jpg"},
-    {"id":"player-3","name":"Franz Beckenbauer","teamId":"team1","goals":0,"image":"/images/franz-beckenbauer-bayern-1973-1599485152-46867.jpg"},
-    {"id":"player-4","name":"Tony Adams","teamId":"team1","goals":0,"image":"/images/nintchdbpict000001772564.webp"},
-    {"id":"player-5","name":"Juliano Belletti","teamId":"team1","goals":0,"image":"/images/belletti.webp"},
-    {"id":"player-6","name":"Patrick Vieira","teamId":"team1","goals":0,"image":"/images/images.jpg"},
-    {"id":"player-7","name":"David Beckham","teamId":"team1","goals":0,"image":"/images/3139-1746174990.webp"},
-    {"id":"player-8","name":"Kevin De Bruyne","teamId":"team1","goals":1,"image":"/images/turin-italy-december-11-2024-600nw-2568080867.webp"},
-    {"id":"player-9","name":"Antoine Griezmann","teamId":"team1","goals":0,"image":"/images/01j9170tsr9fz9f9hdv7.webp"},
-    {"id":"player-10","name":"Kylian MbappÃ©","teamId":"team1","goals":3,"image":"/images/edcd0e17b08209d7de3d4721470e6db3.jpg"},
-    {"id":"player-11","name":"Lionel Messi","teamId":"team1","goals":0,"image":"/images/MESSI.jpg"},
-    {"id":"player-12","name":"Erling Haaland","teamId":"team1","goals":1,"image":"/images/erling-haaland-elec-blue.webp"},
-    {"id":"player-13","name":"Hristo Stoichkov","teamId":"team1","goals":0,"image":"/images/6112.jpg"},
-    {"id":"player-14","name":"Mohamed Salah","teamId":"team1","goals":0,"image":"/images/1071172.jpeg.webp"},
-    {"id":"player-15","name":"Fernando Torres","teamId":"team1","goals":0,"image":"/images/7767-1683642827.webp"},
-    {"id":"player-16","name":"Paul Scholes","teamId":"team1","goals":0,"image":"/images/tumblr_m96x5iwo0w1r9s77do1_1280.jpg"},
-    {"id":"player-17","name":"Frank Lampard","teamId":"team1","goals":0,"image":"/images/Chelsea-v-Basel-Frank-Lampard_3005627.jpg"},
-    {"id":"player-18","name":"Alessandro Bastoni","teamId":"team1","goals":0,"image":"/images/bastoni-2-scaled-e1591887109620.jpg"},
-    {"id":"player-19","name":"Achraf Hakimi","teamId":"team1","goals":0,"image":"/images/398073-1672304327.webp"},
-    {"id":"player-20","name":"Ben White","teamId":"team1","goals":0,"image":"/images/B.WHITE_Headshot_web_xdbqzl78.avif"},
-    {"id":"player-21","name":"Roberto Carlos","teamId":"team1","goals":0,"image":"/images/large-roberto-carlos-le-canonier-bresilien-40436.jpg"},
-    {"id":"player-22","name":"Emiliano MartÃ­nez","teamId":"team1","goals":0,"image":"/images/GOAL - Blank WEB - Facebook (87).png.webp"},
-    {"id":"player-23","name":"Steven Gerrard","teamId":"team1","goals":0,"image":"/images/gettyimages-93428275-612x612.jpg"},
-    {"id":"player-24","name":"Lionel Messi","teamId":"team2","goals":2,"image":"/images/MESSI.jpg"},
-    {"id":"player-25","name":"David Beckham","teamId":"team2","goals":0,"image":"/images/3139-1746174990.webp"},
-    {"id":"player-26","name":"Wesley Sneijder","teamId":"team2","goals":3,"image":"/images/170221.jpg"},
-    {"id":"player-27","name":"Ruud Gullit","teamId":"team2","goals":1,"image":"/images/Gullit.jpg"},
-    {"id":"player-28","name":"Kevin De Bruyne","teamId":"team2","goals":0,"image":"/images/turin-italy-december-11-2024-600nw-2568080867.webp"},
-    {"id":"player-29","name":"Guti","teamId":"team2","goals":1,"image":"/images/guti_courtesy.jpg"},
-    {"id":"player-30","name":"Achraf Hakimi","teamId":"team2","goals":0,"image":"/images/398073-1672304327.webp"},
-    {"id":"player-31","name":"Alessandro Costacurta","teamId":"team2","goals":0,"image":"/images/6650df3c18b530eb0a869213b4f3b8fb.jpg"},
-    {"id":"player-32","name":"Marquinhos","teamId":"team2","goals":0,"image":"/images/253221.jpg"},
-    {"id":"player-33","name":"Cafu","teamId":"team2","goals":0,"image":"/images/cafu-brazil-17-june-2002-H9F7NF.jpg"},
-    {"id":"player-34","name":"Christian Abbiati","teamId":"team2","goals":0,"image":"/images/671933_ori__20200508164101_christian_abbiati.png"},
-    {"id":"player-35","name":"Iker Casillas","teamId":"team2","goals":0,"image":"/images/1330347659219.webp"},
-    {"id":"player-36","name":"RÃºben Neves","teamId":"team2","goals":0,"image":"/images/7715.png"},
-    {"id":"player-37","name":"Didier Drogba","teamId":"team2","goals":1,"image":"/images/artfichier_790899_5377536_20151226531845.jpg"},
-    {"id":"player-38","name":"Martin Ã˜degaard","teamId":"team2","goals":0,"image":"/images/404206_martin_odegaard_20250928235350.png"},
-    {"id":"player-39","name":"Erling Haaland","teamId":"team2","goals":0,"image":"/images/erling-haaland-elec-blue.webp"},
-    {"id":"player-40","name":"Neymar Jr.","teamId":"team2","goals":0,"image":"/images/603_neymar.jpg"},
-    {"id":"player-41","name":"Kylian MbappÃ©","teamId":"team2","goals":0,"image":"/images/edcd0e17b08209d7de3d4721470e6db3.jpg"},
-    {"id":"player-42","name":"Warren Zaire-Emery","teamId":"team2","goals":0,"image":"/images/images (1).jpg"},
-    {"id":"player-43","name":"Lautaro MartÃ­nez","teamId":"team2","goals":0,"image":"/images/82491.png"},
-    {"id":"player-44","name":"Ben White","teamId":"team2","goals":0,"image":"/images/B.WHITE_Headshot_web_xdbqzl78.avif"},
-    {"id":"player-45","name":"Joshua Kimmich","teamId":"team2","goals":0,"image":"/images/joshua_kimmich.avif"},
-    {"id":"player-46","name":"Alessandro Bastoni","teamId":"team2","goals":0,"image":"/images/bastoni-2-scaled-e1591887109620.jpg"}
+    {
+      "id": "player-1",
+      "name": "Peter Schmeichel",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/peter-schmeichel-danish-footballer-in-national-team-for-european-championship-WPA7TP.jpg"
+    },
+    {
+      "id": "player-2",
+      "name": "Alessandro Costacurta",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/6650df3c18b530eb0a869213b4f3b8fb.jpg"
+    },
+    {
+      "id": "player-3",
+      "name": "Franz Beckenbauer",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/franz-beckenbauer-bayern-1973-1599485152-46867.jpg"
+    },
+    {
+      "id": "player-4",
+      "name": "Tony Adams",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/nintchdbpict000001772564.webp"
+    },
+    {
+      "id": "player-5",
+      "name": "Juliano Belletti",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/belletti.webp"
+    },
+    {
+      "id": "player-6",
+      "name": "Patrick Vieira",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/images.jpg"
+    },
+    {
+      "id": "player-7",
+      "name": "David Beckham",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/3139-1746174990.webp"
+    },
+    {
+      "id": "player-8",
+      "name": "Kevin De Bruyne",
+      "teamId": "team1",
+      "goals": 1,
+      "image": "/images/turin-italy-december-11-2024-600nw-2568080867.webp"
+    },
+    {
+      "id": "player-9",
+      "name": "Antoine Griezmann",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/01j9170tsr9fz9f9hdv7.webp"
+    },
+    {
+      "id": "player-10",
+      "name": "Kylian Mbappé",
+      "teamId": "team1",
+      "goals": 3,
+      "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
+    },
+    {
+      "id": "player-11",
+      "name": "Lionel Messi",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/MESSI.jpg"
+    },
+    {
+      "id": "player-12",
+      "name": "Erling Haaland",
+      "teamId": "team1",
+      "goals": 1,
+      "image": "/images/erling-haaland-elec-blue.webp"
+    },
+    {
+      "id": "player-13",
+      "name": "Hristo Stoichkov",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/6112.jpg"
+    },
+    {
+      "id": "player-14",
+      "name": "Mohamed Salah",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/1071172.jpeg.webp"
+    },
+    {
+      "id": "player-15",
+      "name": "Fernando Torres",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/7767-1683642827.webp"
+    },
+    {
+      "id": "player-16",
+      "name": "Paul Scholes",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/tumblr_m96x5iwo0w1r9s77do1_1280.jpg"
+    },
+    {
+      "id": "player-17",
+      "name": "Frank Lampard",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/Chelsea-v-Basel-Frank-Lampard_3005627.jpg"
+    },
+    {
+      "id": "player-18",
+      "name": "Alessandro Bastoni",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/bastoni-2-scaled-e1591887109620.jpg"
+    },
+    {
+      "id": "player-19",
+      "name": "Achraf Hakimi",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/398073-1672304327.webp"
+    },
+    {
+      "id": "player-20",
+      "name": "Ben White",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/B.WHITE_Headshot_web_xdbqzl78.avif"
+    },
+    {
+      "id": "player-21",
+      "name": "Roberto Carlos",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/large-roberto-carlos-le-canonier-bresilien-40436.jpg"
+    },
+    {
+      "id": "player-22",
+      "name": "Emiliano Martínez",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/GOAL - Blank WEB - Facebook (87).png.webp"
+    },
+    {
+      "id": "player-23",
+      "name": "Steven Gerrard",
+      "teamId": "team1",
+      "goals": 0,
+      "image": "/images/gettyimages-93428275-612x612.jpg"
+    },
+    {
+      "id": "player-24",
+      "name": "Lionel Messi",
+      "teamId": "team2",
+      "goals": 2,
+      "image": "/images/MESSI.jpg"
+    },
+    {
+      "id": "player-25",
+      "name": "David Beckham",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/3139-1746174990.webp"
+    },
+    {
+      "id": "player-26",
+      "name": "Wesley Sneijder",
+      "teamId": "team2",
+      "goals": 3,
+      "image": "/images/170221.jpg"
+    },
+    {
+      "id": "player-27",
+      "name": "Ruud Gullit",
+      "teamId": "team2",
+      "goals": 1,
+      "image": "/images/Gullit.jpg"
+    },
+    {
+      "id": "player-28",
+      "name": "Kevin De Bruyne",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/turin-italy-december-11-2024-600nw-2568080867.webp"
+    },
+    {
+      "id": "player-29",
+      "name": "Guti",
+      "teamId": "team2",
+      "goals": 1,
+      "image": "/images/guti_courtesy.jpg"
+    },
+    {
+      "id": "player-30",
+      "name": "Achraf Hakimi",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/398073-1672304327.webp"
+    },
+    {
+      "id": "player-31",
+      "name": "Alessandro Costacurta",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/6650df3c18b530eb0a869213b4f3b8fb.jpg"
+    },
+    {
+      "id": "player-32",
+      "name": "Marquinhos",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/253221.jpg"
+    },
+    {
+      "id": "player-33",
+      "name": "Cafu",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/cafu-brazil-17-june-2002-H9F7NF.jpg"
+    },
+    {
+      "id": "player-34",
+      "name": "Christian Abbiati",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/671933_ori__20200508164101_christian_abbiati.png"
+    },
+    {
+      "id": "player-35",
+      "name": "Iker Casillas",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/1330347659219.webp"
+    },
+    {
+      "id": "player-36",
+      "name": "Rúben Neves",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/7715.png"
+    },
+    {
+      "id": "player-37",
+      "name": "Didier Drogba",
+      "teamId": "team2",
+      "goals": 1,
+      "image": "/images/artfichier_790899_5377536_20151226531845.jpg"
+    },
+    {
+      "id": "player-38",
+      "name": "Martin Ødegaard",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/404206_martin_odegaard_20250928235350.png"
+    },
+    {
+      "id": "player-39",
+      "name": "Erling Haaland",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/erling-haaland-elec-blue.webp"
+    },
+    {
+      "id": "player-40",
+      "name": "Neymar Jr.",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/603_neymar.jpg"
+    },
+    {
+      "id": "player-41",
+      "name": "Kylian Mbappé",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
+    },
+    {
+      "id": "player-42",
+      "name": "Warren Zaire-Emery",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/images (1).jpg"
+    },
+    {
+      "id": "player-43",
+      "name": "Lautaro Martínez",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/82491.png"
+    },
+    {
+      "id": "player-44",
+      "name": "Ben White",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/B.WHITE_Headshot_web_xdbqzl78.avif"
+    },
+    {
+      "id": "player-45",
+      "name": "Joshua Kimmich",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/joshua_kimmich.avif"
+    },
+    {
+      "id": "player-46",
+      "name": "Alessandro Bastoni",
+      "teamId": "team2",
+      "goals": 0,
+      "image": "/images/bastoni-2-scaled-e1591887109620.jpg"
+    }
   ],
   "matches": [
     {
@@ -85,11 +361,26 @@
       "homeGoals": 1,
       "awayGoals": 5,
       "scorers": [
-        {"playerId": "player-24","goals": 2},
-        {"playerId": "player-37","goals": 1},
-        {"playerId": "player-27","goals": 1},
-        {"playerId": "player-26","goals": 1},
-        {"playerId": "player-12","goals": 1}
+        {
+          "playerId": "player-24",
+          "goals": 2
+        },
+        {
+          "playerId": "player-37",
+          "goals": 1
+        },
+        {
+          "playerId": "player-27",
+          "goals": 1
+        },
+        {
+          "playerId": "player-26",
+          "goals": 1
+        },
+        {
+          "playerId": "player-12",
+          "goals": 1
+        }
       ],
       "date": "2025-12-04T11:05:25.803Z"
     },
@@ -102,10 +393,22 @@
       "homeGoals": 4,
       "awayGoals": 3,
       "scorers": [
-        {"playerId": "player-10","goals": 3},
-        {"playerId": "player-8","goals": 1},
-        {"playerId": "player-26","goals": 2},
-        {"playerId": "player-29","goals": 1}
+        {
+          "playerId": "player-10",
+          "goals": 3
+        },
+        {
+          "playerId": "player-8",
+          "goals": 1
+        },
+        {
+          "playerId": "player-26",
+          "goals": 2
+        },
+        {
+          "playerId": "player-29",
+          "goals": 1
+        }
       ],
       "date": "2025-12-04T11:06:13.627Z"
     }
