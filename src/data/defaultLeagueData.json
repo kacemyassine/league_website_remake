@@ -1,4 +1,3 @@
-
 {
   "teams": [
     {
@@ -6,12 +5,12 @@
       "name": "Ocean Dragon",
       "coach": "Wassim",
       "logo": "/images/Mito_HollyHock_(logo).svg.png",
-      "played": 2,
+      "played": 3,
       "won": 1,
       "drawn": 0,
-      "lost": 1,
+      "lost": 2,
       "goalsFor": 5,
-      "goalsAgainst": 8,
+      "goalsAgainst": 11,
       "points": 3
     },
     {
@@ -19,13 +18,13 @@
       "name": "Harbor United",
       "coach": "Yassine",
       "logo": "/images/e_005768.png",
-      "played": 2,
-      "won": 1,
+      "played": 3,
+      "won": 2,
       "drawn": 0,
       "lost": 1,
-      "goalsFor": 8,
+      "goalsFor": 11,
       "goalsAgainst": 5,
-      "points": 3
+      "points": 6
     }
   ],
   "players": [
@@ -94,7 +93,7 @@
     },
     {
       "id": "player-10",
-      "name": "Kylian Mbappé",
+      "name": "Kylian MbappÃ©",
       "teamId": "team1",
       "goals": 3,
       "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
@@ -178,7 +177,7 @@
     },
     {
       "id": "player-22",
-      "name": "Emiliano Martínez",
+      "name": "Emiliano MartÃ­nez",
       "teamId": "team1",
       "goals": 0,
       "image": "/images/GOAL - Blank WEB - Facebook (87).png.webp"
@@ -194,7 +193,7 @@
       "id": "player-24",
       "name": "Lionel Messi",
       "teamId": "team2",
-      "goals": 2,
+      "goals": 3,
       "image": "/images/MESSI.jpg"
     },
     {
@@ -208,14 +207,14 @@
       "id": "player-26",
       "name": "Wesley Sneijder",
       "teamId": "team2",
-      "goals": 3,
+      "goals": 4,
       "image": "/images/170221.jpg"
     },
     {
       "id": "player-27",
       "name": "Ruud Gullit",
       "teamId": "team2",
-      "goals": 1,
+      "goals": 2,
       "image": "/images/Gullit.jpg"
     },
     {
@@ -276,7 +275,7 @@
     },
     {
       "id": "player-36",
-      "name": "Rúben Neves",
+      "name": "RÃºben Neves",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/7715.png"
@@ -290,7 +289,7 @@
     },
     {
       "id": "player-38",
-      "name": "Martin Ødegaard",
+      "name": "Martin Ãdegaard",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/404206_martin_odegaard_20250928235350.png"
@@ -311,7 +310,7 @@
     },
     {
       "id": "player-41",
-      "name": "Kylian Mbappé",
+      "name": "Kylian MbappÃ©",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
@@ -325,7 +324,7 @@
     },
     {
       "id": "player-43",
-      "name": "Lautaro Martínez",
+      "name": "Lautaro MartÃ­nez",
       "teamId": "team2",
       "goals": 0,
       "image": "/images/82491.png"
@@ -412,6 +411,30 @@
         }
       ],
       "date": "2025-12-04T11:06:13.627Z"
+    },
+    {
+      "id": "match-1764874082126",
+      "homeTeamId": "team1",
+      "awayTeamId": "team2",
+      "homeTeamName": "Ocean Dragon",
+      "awayTeamName": "Harbor United",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "scorers": [
+        {
+          "playerId": "player-26",
+          "goals": 1
+        },
+        {
+          "playerId": "player-27",
+          "goals": 1
+        },
+        {
+          "playerId": "player-24",
+          "goals": 1
+        }
+      ],
+      "date": "2025-12-04T18:48:02.126Z"
     }
   ]
 }
