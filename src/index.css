@@ -73,10 +73,15 @@
     @apply border-border;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground font-body;
     background: var(--gradient-ocean);
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -117,6 +122,29 @@
     border-radius: 50%;
     background: hsl(var(--teal-glow) / 0.1);
     animation: float 8s ease-in-out infinite;
+  }
+
+  /* Custom scrollbar for horizontal scroll containers */
+  .scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.5) transparent;
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.5);
+    border-radius: 3px;
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.7);
   }
 
   @keyframes float {
