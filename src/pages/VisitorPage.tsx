@@ -38,7 +38,7 @@ const VisitorPage = () => {
 
   return (
     <AdminProvider isAdmin={false}>
-      <div className="relative w-full">
+      <div className="min-h-screen relative overflow-x-hidden">
 
         {/* Top viewport video section */}
         <div className="relative w-full h-screen">
@@ -60,14 +60,16 @@ const VisitorPage = () => {
         </div>
 
         {/* Rest of the scrollable page content */}
-        <div className="relative z-10 container mx-auto px-4 py-12">
-          <div className="grid lg:grid-cols-2 gap-6">
-            <div className="space-y-6">
+        <div className="relative z-10 container mx-auto px-3 md:px-4 py-12 max-w-full overflow-x-hidden">
+          <div className="grid lg:grid-cols-2 gap-4 md:gap-6">
+            <div className="space-y-4 md:space-y-6 min-w-0">
               <StandingsTable />
               <TeamLogoUploader />
               <MatchHistory />
             </div>
-            <TopScorers onEditPlayer={() => {}} />
+            <div className="min-w-0">
+              <TopScorers onEditPlayer={() => {}} />
+            </div>
           </div>
         </div>
       </div>
@@ -76,4 +78,3 @@ const VisitorPage = () => {
 };
 
 export default VisitorPage;
-
