@@ -18,7 +18,7 @@ export function LeagueHeader() {
         <div className="flex items-center justify-center gap-2 sm:gap-4 mb-4 px-2">
           <Trophy className="w-6 h-6 sm:w-10 sm:h-10 text-gold drop-shadow-lg shrink-0" />
           <h1 className="text-2xl sm:text-4xl md:text-6xl font-display font-bold tracking-wider text-gradient-gold text-center">
-            ATLANTIS LEAGUE V2
+            COSMUS LEAGUE
           </h1>
           <Trophy className="w-6 h-6 sm:w-10 sm:h-10 text-gold drop-shadow-lg shrink-0" />
         </div>

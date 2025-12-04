@@ -65,7 +65,7 @@ const AdminPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-ocean-deep via-ocean-mid to-ocean-light">
+      <div className="min-h-screen flex items-center justify-center bg-black">
         <Loader2 className="w-12 h-12 text-primary animate-spin" />
       </div>
     );
@@ -73,22 +73,26 @@ const AdminPage = () => {
 
   return (
     <AdminProvider isAdmin={true}>
-      <div className="min-h-screen relative">
-        <div className="fixed inset-0 z-0 bg-gradient-to-b from-ocean-deep via-ocean-mid to-ocean-light">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-glow/5 via-transparent to-transparent" />
-        </div>
+      <div className="relative w-full min-h-screen overflow-hidden">
+        {/* Full-viewport video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src="/videos/12722063-uhd_3840_2160_24fps.mp4"
+        />
 
+        {/* Optional overlay for readability */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
+
+        {/* Page content */}
         <div className="relative z-10 container mx-auto px-4 pb-12">
           <LeagueHeader />
 
           <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in">
-            <Button
-              onClick={() => setPlayerFormOpen(true)}
-              className="gap-2"
-              variant="outline"
-            >
-              <UserPlus className="w-4 h-4" />
-              Add Player
+            <Button onClick={() => setPlayerFormOpen(true)} className="gap-2" variant="outline">
+              <UserPlus className="w-4 h-4" /> Add Player
             </Button>
 
             <Button
@@ -96,25 +100,17 @@ const AdminPage = () => {
               className="gap-2"
               disabled={matches.length >= 50}
             >
-              <Play className="w-4 h-4" />
-              Record Match ({matches.length}/50)
+              <Play className="w-4 h-4" /> Record Match ({matches.length}/50)
             </Button>
 
-            <Button
-              onClick={handleSaveToGitHub}
-              className="gap-2"
-              variant="secondary"
-              disabled={saving}
-            >
-              {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-              Save to GitHub
+            <Button onClick={handleSaveToGitHub} className="gap-2" variant="secondary" disabled={saving}>
+              {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />} Save to GitHub
             </Button>
 
             <AlertDialog>
               <AlertDialogTrigger asChild>
                 <Button variant="destructive" className="gap-2">
-                  <RotateCcw className="w-4 h-4" />
-                  Reset League
+                  <RotateCcw className="w-4 h-4" /> Reset League
                 </Button>
               </AlertDialogTrigger>
               <AlertDialogContent className="bg-card border-border">
@@ -126,9 +122,7 @@ const AdminPage = () => {
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                   <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={resetLeague}>
-                    Reset
-                  </AlertDialogAction>
+                  <AlertDialogAction onClick={resetLeague}>Reset</AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
@@ -144,16 +138,8 @@ const AdminPage = () => {
           </div>
         </div>
 
-        <PlayerForm
-          open={playerFormOpen}
-          onOpenChange={handlePlayerFormClose}
-          editingPlayerId={editingPlayerId}
-        />
-
-        <MatchForm
-          open={matchFormOpen}
-          onOpenChange={setMatchFormOpen}
-        />
+        <PlayerForm open={playerFormOpen} onOpenChange={handlePlayerFormClose} editingPlayerId={editingPlayerId} />
+        <MatchForm open={matchFormOpen} onOpenChange={setMatchFormOpen} />
       </div>
     </AdminProvider>
   );
