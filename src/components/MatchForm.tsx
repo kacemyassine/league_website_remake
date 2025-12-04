@@ -22,9 +22,10 @@ import { toast } from 'sonner';
 interface MatchFormProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  onSave?: (updatedData: any) => void;
 }
 
-export function MatchForm({ open, onOpenChange }: MatchFormProps) {
+export function MatchForm({ open, onOpenChange, onSave }: MatchFormProps) {
   const {
     teams,
     players,
@@ -92,7 +93,16 @@ export function MatchForm({ open, onOpenChange }: MatchFormProps) {
       return;
     }
 
-    addMatch(homeGoals, awayGoals, scorers);
+    const updatedState = addMatch(homeGoals, awayGoals, scorers);
+    const fullState = updatedState ?? {
+      players: useLeagueStore.getState().players,
+      teams: useLeagueStore.getState().teams,
+      matches: useLeagueStore.getState().matches,
+    };
+
+    if (typeof onSave === 'function') {
+      onSave(fullState);
+    }
 
     toast.success(`Match ${matchNumber} recorded!`);
 
@@ -104,27 +114,27 @@ export function MatchForm({ open, onOpenChange }: MatchFormProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-card border-border max-w-md">
+      <DialogContent className="bg-card border-border max-w-md mx-4">
         <DialogHeader>
           <DialogTitle className="font-display text-xl">Record Match {matchNumber}/50</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6 pt-4">
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-2 md:gap-4">
             <div className="text-center flex-1">
-              <p className="text-sm text-muted-foreground mb-2">{selectedHomeTeam?.name || 'Home Team'}</p>
-              <Input type="number" min={0} value={homeGoals} onChange={(e) => setHomeGoals(parseInt(e.target.value || '0') || 0)} className="text-center text-3xl font-bold h-16 bg-input border-border" />
+              <p className="text-xs md:text-sm text-muted-foreground mb-2">{selectedHomeTeam?.name || 'Home Team'}</p>
+              <Input type="number" min={0} value={homeGoals} onChange={(e) => setHomeGoals(parseInt(e.target.value || '0') || 0)} className="text-center text-2xl md:text-3xl font-bold h-12 md:h-16 bg-input border-border" />
             </div>
-            <span className="text-2xl text-muted-foreground font-display">VS</span>
+            <span className="text-xl md:text-2xl text-muted-foreground font-display">VS</span>
             <div className="text-center flex-1">
-              <p className="text-sm text-muted-foreground mb-2">{selectedAwayTeam?.name || 'Away Team'}</p>
-              <Input type="number" min={0} value={awayGoals} onChange={(e) => setAwayGoals(parseInt(e.target.value || '0') || 0)} className="text-center text-3xl font-bold h-16 bg-input border-border" />
+              <p className="text-xs md:text-sm text-muted-foreground mb-2">{selectedAwayTeam?.name || 'Away Team'}</p>
+              <Input type="number" min={0} value={awayGoals} onChange={(e) => setAwayGoals(parseInt(e.target.value || '0') || 0)} className="text-center text-2xl md:text-3xl font-bold h-12 md:h-16 bg-input border-border" />
             </div>
           </div>
 
           <div className="space-y-3">
             <div className="flex items-center justify-between">
-              <Label>Goal Scorers (Optional)</Label>
+              <Label className="text-sm">Goal Scorers (Optional)</Label>
               <Button type="button" variant="outline" size="sm" onClick={handleAddScorer} className="h-8">
                 <Plus className="w-4 h-4 mr-1" /> Add
               </Button>
@@ -133,15 +143,15 @@ export function MatchForm({ open, onOpenChange }: MatchFormProps) {
             {scorers.map((scorer, index) => (
               <div key={index} className="flex items-center gap-2">
                 <Select value={scorer.playerId} onValueChange={(v) => handleScorerChange(index, 'playerId', v)}>
-                  <SelectTrigger className="flex-1 bg-input border-border"><SelectValue /></SelectTrigger>
+                  <SelectTrigger className="flex-1 bg-input border-border text-sm"><SelectValue /></SelectTrigger>
                   <SelectContent className="bg-popover border-border">
-                    {players?.map((p) => (
-                      <SelectItem key={p.id} value={p.id}>{p.name} ({teams?.find((t) => t.id === p.teamId)?.name})</SelectItem>
+                    {players?.map((p: any) => (
+                      <SelectItem key={p.id} value={p.id}>{p.name} ({teams?.find((t: any) => t.id === p.teamId)?.name})</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
 
-                <Input type="number" min={1} value={scorer.goals} onChange={(e) => handleScorerChange(index, 'goals', parseInt(e.target.value || '1') || 1)} className="w-16 bg-input border-border" />
+                <Input type="number" min={1} value={scorer.goals} onChange={(e) => handleScorerChange(index, 'goals', parseInt(e.target.value || '1') || 1)} className="w-14 md:w-16 bg-input border-border" />
 
                 <Button type="button" variant="ghost" size="icon" onClick={() => handleRemoveScorer(index)} className="h-10 w-10 text-destructive">
                   <Minus className="w-4 h-4" />
