@@ -65,7 +65,7 @@ const AdminPage = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black">
+      <div className="w-screen h-screen flex items-center justify-center bg-black">
         <Loader2 className="w-12 h-12 text-primary animate-spin" />
       </div>
     );
@@ -73,63 +73,69 @@ const AdminPage = () => {
 
   return (
     <AdminProvider isAdmin={true}>
-      <div className="relative w-full min-h-screen overflow-hidden">
-        {/* Full-viewport video background */}
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          src="/videos/12722063-uhd_3840_2160_24fps.mp4"
-        />
+      <div className="relative w-full min-h-screen overflow-x-hidden">
 
-        {/* Optional overlay for readability */}
-        <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
+        {/* Top viewport video section */}
+        <div className="relative w-full h-screen">
+          <video
+            autoPlay
+            loop
+            muted
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            src="/videos/12722063-uhd_3840_2160_24fps.mp4"
+          />
 
-        {/* Page content */}
-        <div className="relative z-10 container mx-auto px-4 pb-12">
-          <LeagueHeader />
+          {/* Overlay for readability */}
+          <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in">
-            <Button onClick={() => setPlayerFormOpen(true)} className="gap-2" variant="outline">
-              <UserPlus className="w-4 h-4" /> Add Player
-            </Button>
+          {/* LeagueHeader displayed over video */}
+          <div className="relative z-10 flex flex-col justify-center items-center h-full">
+            <LeagueHeader />
+            {/* Buttons pushed lower with bottom margin and translated up */}
+            <div className="flex flex-wrap justify-center gap-4 mt-8 mb-12 -translate-y-4">
+              <Button onClick={() => setPlayerFormOpen(true)} className="gap-2" variant="outline">
+                <UserPlus className="w-4 h-4" /> Add Player
+              </Button>
 
-            <Button
-              onClick={() => setMatchFormOpen(true)}
-              className="gap-2"
-              disabled={matches.length >= 50}
-            >
-              <Play className="w-4 h-4" /> Record Match ({matches.length}/50)
-            </Button>
+              <Button
+                onClick={() => setMatchFormOpen(true)}
+                className="gap-2"
+                disabled={matches.length >= 50}
+              >
+                <Play className="w-4 h-4" /> Record Match ({matches.length}/50)
+              </Button>
 
-            <Button onClick={handleSaveToGitHub} className="gap-2" variant="secondary" disabled={saving}>
-              {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />} Save to GitHub
-            </Button>
+              <Button onClick={handleSaveToGitHub} className="gap-2" variant="secondary" disabled={saving}>
+                {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />} Save to GitHub
+              </Button>
 
-            <AlertDialog>
-              <AlertDialogTrigger asChild>
-                <Button variant="destructive" className="gap-2">
-                  <RotateCcw className="w-4 h-4" /> Reset League
-                </Button>
-              </AlertDialogTrigger>
-              <AlertDialogContent className="bg-card border-border">
-                <AlertDialogHeader>
-                  <AlertDialogTitle>Reset League?</AlertDialogTitle>
-                  <AlertDialogDescription>
-                    This will delete all matches, players, and reset team stats.
-                  </AlertDialogDescription>
-                </AlertDialogHeader>
-                <AlertDialogFooter>
-                  <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={resetLeague}>Reset</AlertDialogAction>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button variant="destructive" className="gap-2">
+                    <RotateCcw className="w-4 h-4" /> Reset League
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent className="bg-card border-border">
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Reset League?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      This will delete all matches, players, and reset team stats.
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Cancel</AlertDialogCancel>
+                    <AlertDialogAction onClick={resetLeague}>Reset</AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </div>
           </div>
+        </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
-            <div className="space-y-6">
+        {/* Scrollable page content */}
+        <div className="relative z-10 container mx-auto px-4 pb-12 max-w-full">
+          <div className="grid lg:grid-cols-2 gap-6 mt-6">
+            <div className="space-y-6 min-w-0">
               <StandingsTable />
               <TeamLogoUploader />
               <MatchHistory />
@@ -146,3 +152,11 @@ const AdminPage = () => {
 };
 
 export default AdminPage;
+
+
+
+
+
+
+
+

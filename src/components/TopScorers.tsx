@@ -4,10 +4,11 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 interface TopScorersProps {
-  onEditPlayer: (playerId: string) => void;
+  onEditPlayer?: (playerId: string) => void;
+  hideButtons?: boolean; // Hide Edit/Delete buttons if true
 }
 
-export function TopScorers({ onEditPlayer }: TopScorersProps) {
+export function TopScorers({ onEditPlayer, hideButtons = false }: TopScorersProps) {
   const { players = [], teams = [], deletePlayer } = useLeagueStore();
 
   const sortedPlayers = [...players].sort((a: any, b: any) => (b.goals || 0) - (a.goals || 0));
@@ -16,10 +17,14 @@ export function TopScorers({ onEditPlayer }: TopScorersProps) {
 
   return (
     <div className="atlantis-card p-4 md:p-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-      <h2 className="text-xl md:text-2xl font-display font-semibold mb-4 md:mb-6 glow-text text-primary">Top Scorers</h2>
+      <h2 className="text-xl md:text-2xl font-display font-semibold mb-4 md:mb-6 glow-text text-primary">
+        Top Scorers
+      </h2>
 
       {sortedPlayers.length === 0 ? (
-        <p className="text-muted-foreground text-center py-8 text-sm md:text-base">No players added yet. Add players to track their goals!</p>
+        <p className="text-muted-foreground text-center py-8 text-sm md:text-base">
+          No players added yet. Add players to track their goals!
+        </p>
       ) : (
         <div className="space-y-2 md:space-y-3 overflow-x-auto scroll-container -mx-4 md:mx-0 px-4 md:px-0">
           <div className="min-w-[320px]">
@@ -69,14 +74,26 @@ export function TopScorers({ onEditPlayer }: TopScorersProps) {
                     <p className="text-xs text-muted-foreground">goals</p>
                   </div>
 
-                  <div className="flex gap-1 shrink-0">
-                    <Button variant="ghost" size="icon" className="h-7 w-7 md:h-8 md:w-8 text-muted-foreground hover:text-primary" onClick={() => onEditPlayer(player.id)}>
-                      <Edit2 className="w-3 h-3 md:w-4 md:h-4" />
-                    </Button>
-                    <Button variant="ghost" size="icon" className="h-7 w-7 md:h-8 md:w-8 text-muted-foreground hover:text-destructive" onClick={() => deletePlayer(player.id)}>
-                      <Trash2 className="w-3 h-3 md:w-4 md:h-4" />
-                    </Button>
-                  </div>
+                  {!hideButtons && (
+                    <div className="flex gap-1 shrink-0">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-7 w-7 md:h-8 md:w-8 text-muted-foreground hover:text-primary"
+                        onClick={() => onEditPlayer?.(player.id)}
+                      >
+                        <Edit2 className="w-3 h-3 md:w-4 md:h-4" />
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-7 w-7 md:h-8 md:w-8 text-muted-foreground hover:text-destructive"
+                        onClick={() => deletePlayer(player.id)}
+                      >
+                        <Trash2 className="w-3 h-3 md:w-4 md:h-4" />
+                      </Button>
+                    </div>
+                  )}
                 </div>
               );
             })}

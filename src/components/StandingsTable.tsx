@@ -61,21 +61,33 @@ export function StandingsTable() {
                   </td>
                   <td className="py-3 md:py-4 px-2">
                     <div className="flex items-center gap-2 md:gap-3">
-                      <div className={cn(
-                        'w-8 h-8 md:w-10 md:h-10 rounded-lg overflow-hidden border bg-muted/30 flex items-center justify-center shrink-0',
-                        team.id === 'team1' ? 'border-primary/50' : 'border-secondary/50'
-                      )}>
+                      <div
+                        className={cn(
+                          'w-8 h-8 md:w-10 md:h-10 rounded-lg overflow-hidden border bg-muted/30 flex items-center justify-center shrink-0',
+                          team.id === 'team1' ? 'border-primary/50' : 'border-secondary/50'
+                        )}
+                      >
                         {team.logo ? (
                           <img src={team.logo} alt={team.name} className="w-full h-full object-cover" />
                         ) : (
-                          <Shield className={cn('w-4 h-4 md:w-5 md:h-5', team.id === 'team1' ? 'text-primary/50' : 'text-secondary/50')} />
+                          <Shield
+                            className={cn(
+                              'w-4 h-4 md:w-5 md:h-5',
+                              team.id === 'team1' ? 'text-primary/50' : 'text-secondary/50'
+                            )}
+                          />
                         )}
                       </div>
                       <div className="min-w-0">
-                        <p className={cn('font-semibold text-sm md:text-base truncate', team.id === 'team1' ? 'text-primary' : 'text-secondary')}>
+                        <p
+                          className={cn(
+                            'font-semibold text-sm md:text-base truncate',
+                            team.id === 'team1' ? 'text-primary' : 'text-secondary'
+                          )}
+                        >
                           {team.name}
                         </p>
-                        <p className="text-xs text-muted-foreground hidden sm:block">Coach {team.coach}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">Coach {team.coach}</p>
                       </div>
                     </div>
                   </td>
@@ -85,7 +97,12 @@ export function StandingsTable() {
                   <td className="py-3 md:py-4 px-2 text-center text-coral text-sm">{team.lost}</td>
                   <td className="py-3 md:py-4 px-2 text-center text-sm">{team.goalsFor}</td>
                   <td className="py-3 md:py-4 px-2 text-center text-sm">{team.goalsAgainst}</td>
-                  <td className={cn('py-3 md:py-4 px-2 text-center font-medium text-sm', goalDiff > 0 ? 'text-green-400' : goalDiff < 0 ? 'text-coral' : '')}>
+                  <td
+                    className={cn(
+                      'py-3 md:py-4 px-2 text-center font-medium text-sm',
+                      goalDiff > 0 ? 'text-green-400' : goalDiff < 0 ? 'text-coral' : ''
+                    )}
+                  >
                     {goalDiff > 0 ? `+${goalDiff}` : goalDiff}
                   </td>
                   <td className="py-3 md:py-4 px-2 text-center">

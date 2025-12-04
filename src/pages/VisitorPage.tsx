@@ -4,7 +4,6 @@ import { LeagueHeader } from '@/components/LeagueHeader';
 import { StandingsTable } from '@/components/StandingsTable';
 import { TopScorers } from '@/components/TopScorers';
 import { MatchHistory } from '@/components/MatchHistory';
-import { TeamLogoUploader } from '@/components/TeamLogoUploader';
 import { useLeagueStore } from '@/store/leagueStore';
 import { useGitHubData } from '@/hooks/useGitHubData';
 import { Loader2 } from 'lucide-react';
@@ -50,25 +49,23 @@ const VisitorPage = () => {
             src="/videos/12722063-uhd_3840_2160_24fps.mp4"
           />
 
-          {/* Optional overlay for readability */}
           <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
 
-          {/* LeagueHeader displayed over video */}
           <div className="relative z-10 flex flex-col justify-center items-center h-full">
             <LeagueHeader />
           </div>
         </div>
 
-        {/* Rest of the scrollable page content */}
+        {/* Scrollable content */}
         <div className="relative z-10 container mx-auto px-3 md:px-4 py-12 max-w-full overflow-x-hidden">
           <div className="grid lg:grid-cols-2 gap-4 md:gap-6">
             <div className="space-y-4 md:space-y-6 min-w-0">
               <StandingsTable />
-              <TeamLogoUploader />
               <MatchHistory />
             </div>
             <div className="min-w-0">
-              <TopScorers onEditPlayer={() => {}} />
+              {/* TopScorers displayed WITHOUT buttons */}
+              <TopScorers hideButtons={true} />
             </div>
           </div>
         </div>
