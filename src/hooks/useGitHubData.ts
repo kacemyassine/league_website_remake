@@ -15,6 +15,11 @@ export interface LeagueData {
   matches: any[];
 }
 
+// helper to decode base64 → UTF-8 safely
+function base64ToUtf8(str: string) {
+  return decodeURIComponent(escape(atob(str)));
+}
+
 export function useGitHubData() {
   const fetchData = useCallback(async (): Promise<LeagueData | null> => {
     try {
@@ -24,7 +29,9 @@ export function useGitHubData() {
       );
       if (!apiRes.ok) throw new Error('Failed to fetch');
       const { content } = await apiRes.json();
-      return JSON.parse(atob(content)) as LeagueData;
+
+      // decode base64 safely
+      return JSON.parse(base64ToUtf8(content)) as LeagueData;
     } catch (e) {
       console.error(e);
       toast.error('Failed to fetch league data');
