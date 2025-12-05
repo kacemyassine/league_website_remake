@@ -5,9 +5,9 @@
       "name": "Ocean Dragon",
       "coach": "Wassim",
       "logo": "/images/Mito_HollyHock_(logo).svg.png",
-      "played": 6,
+      "played": 4,
       "won": 1,
-      "drawn": 3,
+      "drawn": 1,
       "lost": 2,
       "goalsFor": 7,
       "goalsAgainst": 13,
@@ -18,9 +18,9 @@
       "name": "Harbor United",
       "coach": "Yassine",
       "logo": "/images/e_005768.png",
-      "played": 6,
+      "played": 4,
       "won": 2,
-      "drawn": 3,
+      "drawn": 1,
       "lost": 1,
       "goalsFor": 13,
       "goalsAgainst": 7,
@@ -463,17 +463,6 @@
         }
       ],
       "date": "2025-12-04T19:57:38.138Z"
-    },
-    {
-      "id": "match-1764920058117",
-      "homeTeamId": "team1",
-      "awayTeamId": "team2",
-      "homeTeamName": "Ocean Dragon",
-      "awayTeamName": "Harbor United",
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "scorers": [],
-      "date": "2025-12-05T07:34:18.117Z"
     }
   ]
 }
