@@ -5,12 +5,12 @@
       "name": "Ocean Dragon",
       "coach": "Wassim",
       "logo": "/images/Mito_HollyHock_(logo).svg.png",
-      "played": 4,
+      "played": 5,
       "won": 1,
       "drawn": 1,
-      "lost": 2,
-      "goalsFor": 7,
-      "goalsAgainst": 13,
+      "lost": 3,
+      "goalsFor": 9,
+      "goalsAgainst": 16,
       "points": 6
     },
     {
@@ -18,13 +18,13 @@
       "name": "Harbor United",
       "coach": "Yassine",
       "logo": "/images/e_005768.png",
-      "played": 4,
-      "won": 2,
+      "played": 5,
+      "won": 3,
       "drawn": 1,
       "lost": 1,
-      "goalsFor": 13,
-      "goalsAgainst": 7,
-      "points": 9
+      "goalsFor": 16,
+      "goalsAgainst": 9,
+      "points": 12
     }
   ],
   "players": [
@@ -88,7 +88,7 @@
       "id": "player-9",
       "name": "Antoine Griezmann",
       "teamId": "team1",
-      "goals": 0,
+      "goals": 1,
       "image": "/images/01j9170tsr9fz9f9hdv7.webp"
     },
     {
@@ -116,7 +116,7 @@
       "id": "player-13",
       "name": "Hristo Stoichkov",
       "teamId": "team1",
-      "goals": 0,
+      "goals": 1,
       "image": "/images/6112.jpg"
     },
     {
@@ -193,7 +193,7 @@
       "id": "player-24",
       "name": "Lionel Messi",
       "teamId": "team2",
-      "goals": 4,
+      "goals": 6,
       "image": "/images/MESSI.jpg"
     },
     {
@@ -214,7 +214,7 @@
       "id": "player-27",
       "name": "Ruud Gullit",
       "teamId": "team2",
-      "goals": 2,
+      "goals": 3,
       "image": "/images/Gullit.jpg"
     },
     {
@@ -463,6 +463,34 @@
         }
       ],
       "date": "2025-12-04T19:57:38.138Z"
+    },
+    {
+      "id": "match-1764963264494",
+      "homeTeamId": "team1",
+      "awayTeamId": "team2",
+      "homeTeamName": "Ocean Dragon",
+      "awayTeamName": "Harbor United",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "scorers": [
+        {
+          "playerId": "player-9",
+          "goals": 1
+        },
+        {
+          "playerId": "player-13",
+          "goals": 1
+        },
+        {
+          "playerId": "player-24",
+          "goals": 2
+        },
+        {
+          "playerId": "player-27",
+          "goals": 1
+        }
+      ],
+      "date": "2025-12-05T19:34:24.494Z"
     }
   ]
 }
