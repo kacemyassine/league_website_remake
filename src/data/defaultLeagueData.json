@@ -349,6 +349,13 @@
       "teamId": "team2",
       "goals": 0,
       "image": "/images/bastoni-2-scaled-e1591887109620.jpg"
+    },
+    {
+      "name": "Eden Hazard",
+      "teamId": "team1",
+      "image": null,
+      "goals": 0,
+      "id": "player-1765006456537"
     }
   ],
   "matches": [
