@@ -5,25 +5,25 @@
       "name": "Ocean Dragon",
       "coach": "Wassim",
       "logo": "/images/Mito_HollyHock_(logo).svg.png",
-      "played": 9,
-      "won": 2,
+      "played": 10,
+      "won": 3,
       "drawn": 1,
       "lost": 6,
-      "goalsFor": 28,
-      "goalsAgainst": 43,
-      "points": 9
+      "goalsFor": 33,
+      "goalsAgainst": 47,
+      "points": 12
     },
     {
       "id": "team2",
       "name": "Harbor United",
       "coach": "Yassine",
       "logo": "/images/e_005768.png",
-      "played": 9,
+      "played": 10,
       "won": 6,
       "drawn": 1,
-      "lost": 2,
-      "goalsFor": 43,
-      "goalsAgainst": 28,
+      "lost": 3,
+      "goalsFor": 47,
+      "goalsAgainst": 33,
       "points": 21
     }
   ],
@@ -88,14 +88,14 @@
       "id": "player-9",
       "name": "Antoine Griezmann",
       "teamId": "team1",
-      "goals": 3,
+      "goals": 5,
       "image": "/images/01j9170tsr9fz9f9hdv7.webp"
     },
     {
       "id": "player-10",
       "name": "Kylian Mbappé",
       "teamId": "team1",
-      "goals": 11,
+      "goals": 12,
       "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
     },
     {
@@ -109,7 +109,7 @@
       "id": "player-12",
       "name": "Erling Haaland",
       "teamId": "team1",
-      "goals": 5,
+      "goals": 7,
       "image": "/images/erling-haaland-elec-blue.webp"
     },
     {
@@ -193,14 +193,14 @@
       "id": "player-24",
       "name": "Lionel Messi",
       "teamId": "team2",
-      "goals": 10,
+      "goals": 13,
       "image": "/images/MESSI.jpg"
     },
     {
       "id": "player-25",
       "name": "David Beckham",
       "teamId": "team2",
-      "goals": 1,
+      "goals": 2,
       "image": "/images/3139-1746174990.webp"
     },
     {
@@ -674,6 +674,38 @@
         }
       ],
       "date": "2025-12-11T19:51:33.611Z"
+    },
+    {
+      "id": "match-1765654387017",
+      "homeTeamId": "team1",
+      "awayTeamId": "team2",
+      "homeTeamName": "Ocean Dragon",
+      "awayTeamName": "Harbor United",
+      "homeGoals": 5,
+      "awayGoals": 4,
+      "scorers": [
+        {
+          "playerId": "player-24",
+          "goals": 3
+        },
+        {
+          "playerId": "player-10",
+          "goals": 1
+        },
+        {
+          "playerId": "player-9",
+          "goals": 2
+        },
+        {
+          "playerId": "player-25",
+          "goals": 1
+        },
+        {
+          "playerId": "player-12",
+          "goals": 2
+        }
+      ],
+      "date": "2025-12-13T19:33:07.017Z"
     }
   ]
 }
