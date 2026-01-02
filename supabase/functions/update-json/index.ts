@@ -14,6 +14,8 @@ serve(async (req) => {
 
   try {
     const GITHUB_TOKEN = Deno.env.get('GITHUB_TOKEN');
+    console.log("GitHub token length:", GITHUB_TOKEN?.length);
+
     if (!GITHUB_TOKEN) {
       console.error('GITHUB_TOKEN not configured');
       return new Response(
