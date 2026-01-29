@@ -5,25 +5,25 @@
       "name": "Ocean Dragon",
       "coach": "Wassim",
       "logo": "/images/Mito_HollyHock_(logo).svg.png",
-      "played": 32,
-      "won": 8,
+      "played": 33,
+      "won": 9,
       "drawn": 6,
       "lost": 18,
-      "goalsFor": 98,
-      "goalsAgainst": 153,
-      "points": 32
+      "goalsFor": 100,
+      "goalsAgainst": 154,
+      "points": 35
     },
     {
       "id": "team2",
       "name": "Harbor United",
       "coach": "Yassine",
       "logo": "/images/e_005768.png",
-      "played": 32,
+      "played": 33,
       "won": 18,
       "drawn": 6,
-      "lost": 8,
-      "goalsFor": 153,
-      "goalsAgainst": 98,
+      "lost": 9,
+      "goalsFor": 154,
+      "goalsAgainst": 100,
       "points": 62
     }
   ],
@@ -88,7 +88,7 @@
       "id": "player-9",
       "name": "Antoine Griezmann",
       "teamId": "team1",
-      "goals": 16,
+      "goals": 17,
       "image": "/images/01j9170tsr9fz9f9hdv7.webp"
     },
     {
@@ -116,7 +116,7 @@
       "id": "player-13",
       "name": "Hristo Stoichkov",
       "teamId": "team1",
-      "goals": 1,
+      "goals": 2,
       "image": "/images/6112.jpg"
     },
     {
@@ -214,7 +214,7 @@
       "id": "player-27",
       "name": "Ruud Gullit",
       "teamId": "team2",
-      "goals": 22,
+      "goals": 23,
       "image": "/images/Gullit.jpg"
     },
     {
@@ -1453,6 +1453,30 @@
         }
       ],
       "date": "2026-01-28T07:54:27.184Z"
+    },
+    {
+      "id": "match-1769716669125",
+      "homeTeamId": "team1",
+      "awayTeamId": "team2",
+      "homeTeamName": "Ocean Dragon",
+      "awayTeamName": "Harbor United",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "scorers": [
+        {
+          "playerId": "player-13",
+          "goals": 1
+        },
+        {
+          "playerId": "player-9",
+          "goals": 1
+        },
+        {
+          "playerId": "player-27",
+          "goals": 1
+        }
+      ],
+      "date": "2026-01-29T19:57:49.125Z"
     }
   ]
 }
