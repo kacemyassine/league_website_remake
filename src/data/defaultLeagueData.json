@@ -5,12 +5,12 @@
       "name": "Ocean Dragon",
       "coach": "Wassim",
       "logo": "/images/Mito_HollyHock_(logo).svg.png",
-      "played": 34,
+      "played": 35,
       "won": 10,
       "drawn": 6,
-      "lost": 18,
-      "goalsFor": 103,
-      "goalsAgainst": 156,
+      "lost": 19,
+      "goalsFor": 107,
+      "goalsAgainst": 163,
       "points": 38
     },
     {
@@ -18,13 +18,13 @@
       "name": "Harbor United",
       "coach": "Yassine",
       "logo": "/images/e_005768.png",
-      "played": 34,
-      "won": 18,
+      "played": 35,
+      "won": 19,
       "drawn": 6,
       "lost": 10,
-      "goalsFor": 156,
-      "goalsAgainst": 103,
-      "points": 62
+      "goalsFor": 163,
+      "goalsAgainst": 107,
+      "points": 65
     }
   ],
   "players": [
@@ -88,14 +88,14 @@
       "id": "player-9",
       "name": "Antoine Griezmann",
       "teamId": "team1",
-      "goals": 17,
+      "goals": 18,
       "image": "/images/01j9170tsr9fz9f9hdv7.webp"
     },
     {
       "id": "player-10",
       "name": "Kylian Mbappé",
       "teamId": "team1",
-      "goals": 40,
+      "goals": 42,
       "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
     },
     {
@@ -193,7 +193,7 @@
       "id": "player-24",
       "name": "Lionel Messi",
       "teamId": "team2",
-      "goals": 44,
+      "goals": 49,
       "image": "/images/MESSI.jpg"
     },
     {
@@ -214,7 +214,7 @@
       "id": "player-27",
       "name": "Ruud Gullit",
       "teamId": "team2",
-      "goals": 24,
+      "goals": 25,
       "image": "/images/Gullit.jpg"
     },
     {
@@ -291,7 +291,7 @@
       "id": "player-38",
       "name": "Martin Ødegaard",
       "teamId": "team2",
-      "goals": 1,
+      "goals": 2,
       "image": "/images/404206_martin_odegaard_20250928235350.png"
     },
     {
@@ -1505,6 +1505,42 @@
         }
       ],
       "date": "2026-01-30T19:26:46.900Z"
+    },
+    {
+      "id": "match-1769975354217",
+      "homeTeamId": "team1",
+      "awayTeamId": "team2",
+      "homeTeamName": "Ocean Dragon",
+      "awayTeamName": "Harbor United",
+      "homeGoals": 4,
+      "awayGoals": 7,
+      "scorers": [
+        {
+          "playerId": "player-10",
+          "goals": 2
+        },
+        {
+          "playerId": "player-24",
+          "goals": 5
+        },
+        {
+          "playerId": "player-27",
+          "goals": 1
+        },
+        {
+          "playerId": "player-9",
+          "goals": 1
+        },
+        {
+          "playerId": "player-9",
+          "goals": 1
+        },
+        {
+          "playerId": "player-38",
+          "goals": 1
+        }
+      ],
+      "date": "2026-02-01T19:49:14.217Z"
     }
   ]
 }
