@@ -5,25 +5,25 @@
       "name": "Ocean Dragon",
       "coach": "Wassim",
       "logo": "/images/Mito_HollyHock_(logo).svg.png",
-      "played": 36,
-      "won": 11,
+      "played": 37,
+      "won": 12,
       "drawn": 6,
       "lost": 19,
-      "goalsFor": 111,
-      "goalsAgainst": 166,
-      "points": 41
+      "goalsFor": 113,
+      "goalsAgainst": 167,
+      "points": 44
     },
     {
       "id": "team2",
       "name": "Harbor United",
       "coach": "Yassine",
       "logo": "/images/e_005768.png",
-      "played": 36,
+      "played": 37,
       "won": 19,
       "drawn": 6,
-      "lost": 11,
-      "goalsFor": 166,
-      "goalsAgainst": 111,
+      "lost": 12,
+      "goalsFor": 167,
+      "goalsAgainst": 113,
       "points": 65
     }
   ],
@@ -95,7 +95,7 @@
       "id": "player-10",
       "name": "Kylian Mbappé",
       "teamId": "team1",
-      "goals": 42,
+      "goals": 44,
       "image": "/images/edcd0e17b08209d7de3d4721470e6db3.jpg"
     },
     {
@@ -193,7 +193,7 @@
       "id": "player-24",
       "name": "Lionel Messi",
       "teamId": "team2",
-      "goals": 50,
+      "goals": 51,
       "image": "/images/MESSI.jpg"
     },
     {
@@ -1577,6 +1577,26 @@
         }
       ],
       "date": "2026-02-06T20:47:49.772Z"
+    },
+    {
+      "id": "match-1770412499679",
+      "homeTeamId": "team1",
+      "awayTeamId": "team2",
+      "homeTeamName": "Ocean Dragon",
+      "awayTeamName": "Harbor United",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "scorers": [
+        {
+          "playerId": "player-24",
+          "goals": 1
+        },
+        {
+          "playerId": "player-10",
+          "goals": 2
+        }
+      ],
+      "date": "2026-02-06T21:14:59.679Z"
     }
   ]
 }
